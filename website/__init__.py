@@ -1,4 +1,12 @@
 from flask import Flask
+import mysql.connector
+
+db = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="flask"
+)
 
 def create_app():
 	app = Flask(__name__)
